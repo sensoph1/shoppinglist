@@ -17,20 +17,31 @@
   </div>
 
   <h2>people</h2>
+  <table>
+    <tr>
+      <th>Name: </th>
+      <th>budget: </th>
+      <th> destroy</th>
+    </tr>
  <%= f.fields_for :people do |person| %>
   <div class="people_fields">
   <div class="field">
-    <%= person.label :name %><br />
-    <%= person.text_field :name %><br />
-    <%= person.label :budget %><br />
-    <%= person.text_field :budget %>
+    <tr>
+      <td>
+        <%= person.text_field :name %>
+      </td>
+      <td>
+        <%= person.text_field :budget %>
+      </td>
+      <td>
+        <%= person.check_box :_destroy %>
+      </td>
+    </tr>
 
-    <%= person.check_box :_destroy %>
-   <%= person.label :_destroy, 'remove' %>
   </div>
   </div>
  <% end %>
-
+</table>
   <div class="actions">
     <%= f.submit %>
   </div>

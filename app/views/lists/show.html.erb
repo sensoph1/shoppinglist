@@ -7,9 +7,10 @@
 </p>
 <h2>People</h2>
 <% if @list.people.any? %>
-<ul>
+<ul><table>
+
  <% @list.people.each do |person| %>
-<li><%= person.name %> -|- <%= person.budget %> -|- <%= person.list_id %></li>
+<li><%= person.name %> | <%= person.budget %> | <%= person.list_id %></li>
 
  <% end %>
 </ul>
