@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-<strong>Shopping List Name:</strong>
- <%= @list.name %>
+<strong>Shopping List Item:</strong>
+
 
 </p>
 <h2>People</h2>
-<% if @list.people.any? %>
+<% if @person.any? %>
 <table>
   <th>Name: </th>
   <th>budget: </th>
 
- <% @list.people.each do |person| %>
+ <% @person.each do |person| %>
 
 <tr><td><%= link_to person.name, person_path(person.list_id)  %> </td><td> <%= person.budget %> </td></td>
 
@@ -21,5 +21,3 @@
 <% else %>
 <p>none available</p>
 <% end %>
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>

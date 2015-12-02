@@ -11,14 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
 
-  <h2>people</h2>
+
+
+
+
   <table>
-    <tr>
+  
       <th>Name: </th>
       <th>budget: </th>
       <th> destroy</th>
@@ -43,6 +42,6 @@
  <% end %>
 </table>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit",:class => "button" %>
   </div>
 <% end %>
